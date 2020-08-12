@@ -17,6 +17,7 @@ public class ExerciseTwo {
         int[][] matrixA;
         int[][] matrixB;
         int[][] productMatrix;
+        int auxiliar;
         Scanner keyboard = new Scanner(System.in);
 
         System.out.print("Ingrese la cantidad de filas de la Matriz A:");
@@ -32,31 +33,71 @@ public class ExerciseTwo {
         matrixB = new int[rowsAmountMatrixB][columnsAmountMatrixB];
         productMatrix = new int[rowsAmountMatrixA][columnsAmountMatrixB];
 
-        if (columnsAmountMatrixA != rowsAmountMatrixB){
+        if (columnsAmountMatrixA != rowsAmountMatrixB) {
             System.out.println("Estas matrices no se podran multiplicar.");
             return;
         }
 
         for (int i = 0; i < rowsAmountMatrixA; i++) {
             for (int j = 0; j < columnsAmountMatrixA; j++) {
-                System.out.println("Ingrese el numero de la matriz A, fila: " + i + ", columna: " + j);
+                System.out.print("Ingrese el numero de la matriz A, fila: " + i + ", columna: " + j + ": ");
                 matrixA[i][j] = keyboard.nextInt();
             }
         }
         for (int i = 0; i < rowsAmountMatrixB; i++) {
             for (int j = 0; j < columnsAmountMatrixB; j++) {
-                System.out.println("Ingrese el numero de la matriz B, fila: " + i + ", columna: " + j);
+                System.out.print("Ingrese el numero de la matriz B, fila: " + i + ", columna: " + j + ": ");
                 matrixB[i][j] = keyboard.nextInt();
             }
         }
-
-        for (int rows = 0; rows <rowsAmountMatrixA ; rows++) {
-            for (int columns = 0; columns <columnsAmountMatrixB ; columns++) {
-                productMatrix [rows][columns] = matrixA [rows][columns] * matrixB[columns][rows];
+        System.out.println("La matriz A es: ");
+        for (int i = 0; i < rowsAmountMatrixA; i++) {
+            for (int j = 0; j < columnsAmountMatrixA; j++) {
+                System.out.print(matrixA[i][j]);
+                System.out.print("|");
             }
+            System.out.println();
+        }
+        System.out.println("La matriz B es: ");
+        for (int i = 0; i < rowsAmountMatrixB; i++) {
+            for (int j = 0; j < columnsAmountMatrixB; j++) {
+                System.out.print(matrixB[i][j]);
+                System.out.print(" | ");
+            }
+            System.out.println();
+        }
 
+        for (int i = 0; i < rowsAmountMatrixA; i++) {
+            for (int j = 0; j < columnsAmountMatrixB; j++) {
+                productMatrix [i][j] = 0;
+            }
         }
 
 
+        for (int i = 0; i < rowsAmountMatrixA; i++) {
+            for (int j = 0; j < columnsAmountMatrixB; j++) {
+                for (int k = 0; k < rowsAmountMatrixA; k++) {
+                    for (int l = 0; l < columnsAmountMatrixB; l++) {
+                        productMatrix[i][j] = productMatrix[i][j] + (matrixA[k][l] * matrixB[l][k]);
+                    }
+                }
+
+            }
+        }
+
+
+        System.out.println("La matriz de productos es: ");
+        for (int i = 0; i < rowsAmountMatrixA; i++) {
+            for (int j = 0; j < columnsAmountMatrixB; j++) {
+                System.out.print(productMatrix[i][j]);
+                System.out.printf("|");
+            }
+            System.out.println();
+        }
+
     }
+
 }
+
+
+
