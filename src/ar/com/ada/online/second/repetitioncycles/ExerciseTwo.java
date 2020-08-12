@@ -69,25 +69,24 @@ public class ExerciseTwo {
 
         for (int i = 0; i < rowsAmountMatrixA; i++) {
             for (int j = 0; j < columnsAmountMatrixB; j++) {
-                productMatrix [i][j] = 0;
+                productMatrix[i][j] = 0;
             }
         }
 
 
         for (int i = 0; i < rowsAmountMatrixA; i++) {
             for (int j = 0; j < columnsAmountMatrixB; j++) {
-                for (int k = 0; k < rowsAmountMatrixA; k++) {
-                    for (int l = 0; l < columnsAmountMatrixB; l++) {
-                        productMatrix[i][j] = productMatrix[i][j] + (matrixA[k][l] * matrixB[l][k]);
-                    }
+                for (int k = 0; k < columnsAmountMatrixA; k++) {
+                    productMatrix[i][j] = productMatrix[i][j] + (matrixA[i][k] * matrixB[k][j]);
                 }
-
             }
+
         }
 
-
         System.out.println("La matriz de productos es: ");
-        for (int i = 0; i < rowsAmountMatrixA; i++) {
+        for (
+                int i = 0;
+                i < rowsAmountMatrixA; i++) {
             for (int j = 0; j < columnsAmountMatrixB; j++) {
                 System.out.print(productMatrix[i][j]);
                 System.out.printf("|");
