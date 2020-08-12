@@ -84,9 +84,7 @@ public class ExerciseTwo {
         }
 
         System.out.println("La matriz de productos es: ");
-        for (
-                int i = 0;
-                i < rowsAmountMatrixA; i++) {
+        for (int i = 0; i < rowsAmountMatrixA; i++) {
             for (int j = 0; j < columnsAmountMatrixB; j++) {
                 System.out.print(productMatrix[i][j]);
                 System.out.printf("|");
