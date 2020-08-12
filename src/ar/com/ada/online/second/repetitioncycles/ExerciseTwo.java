@@ -1,6 +1,5 @@
 package ar.com.ada.online.second.repetitioncycles;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ExerciseTwo {
@@ -17,7 +16,6 @@ public class ExerciseTwo {
         int[][] matrixA;
         int[][] matrixB;
         int[][] productMatrix;
-        int auxiliar;
         Scanner keyboard = new Scanner(System.in);
 
         System.out.print("Ingrese la cantidad de filas de la Matriz A:");
