@@ -24,9 +24,9 @@ public class ExerciseEight {
         }
 
         System.out.println("Su matriz es");
-        for (int i = 0; i <5 ; i++) {
-            for (int j = 0; j <2 ; j++) {
-                System.out.print(matrix [i][j]);
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(matrix[i][j]);
                 System.out.print(" | ");
             }
             System.out.println();
