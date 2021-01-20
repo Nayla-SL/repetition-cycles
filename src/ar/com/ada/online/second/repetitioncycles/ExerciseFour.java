@@ -15,8 +15,9 @@ public class ExerciseFour {
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Por favor, tenga en cuenta que para este ejercicio, ambas matrices deben ser del mismo tamaño.");
-        System.out.print("Ingrese la cantidad de filas y columnas que tienen sus matrices: ");
+        System.out.print("Ingrese la cantidad de filas que tienen sus matrices: ");
         rowsAmountMatrix = keyboard.nextInt();
+        System.out.print("Ingrese la cantidad de columnas que tienen sus matrices: ");
         columnsAmountMatrix = keyboard.nextInt();
               
 
